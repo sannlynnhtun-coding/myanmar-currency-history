@@ -18,8 +18,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၁ ပဲ)၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ",
     "images": {
-      "obverse": "images/coins/first-kyat/1pe-obverse.jpg",
-      "reverse": "images/coins/first-kyat/1pe-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1pe-obverse.jpg",
+      "reverse": "images/coins/firstkyat/1pe-reverse.jpg"
     }
   },
   {
@@ -41,8 +41,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၁ မူး = ၂ပဲ )၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ",
     "images": {
-      "obverse": "images/coins/first-kyat/1mu-obverse.jpg",
-      "reverse": "images/coins/first-kyat/1mu-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1mu-obverse.jpg",
+      "reverse": "images/coins/firstkyat/1mu-reverse.jpg"
     }
   },
   {
@@ -64,8 +64,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၁ မတ် = ၄ ပဲ)၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ",
     "images": {
-      "obverse": "images/coins/first-kyat/1mat-obverse.jpg",
-      "reverse": "images/coins/first-kyat/1mat-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1mat-obverse.jpg",
+      "reverse": "images/coins/firstkyat/1mat-reverse.jpg"
     }
   },
   {
@@ -87,8 +87,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၅ မူး = ၈ ပဲ) ၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ ",
     "images": {
-      "obverse": "images/coins/first-kyat/5mu-obverse.jpg",
-      "reverse": "images/coins/first-kyat/5mu-reverse.jpg"
+      "obverse": "images/coins/firstkyat/5mu-obverse.jpg",
+      "reverse": "images/coins/firstkyat/5mu-reverse.jpg"
     }
   },
   {
@@ -110,8 +110,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တန်ဖိုးအကြီးဆုံး (1ကျပ်)",
     "images": {
-      "obverse": "images/coins/first-kyat/1kyat-obverse.jpg",
-      "reverse": "images/coins/first-kyat/1kyat-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1kyat-obverse.jpg",
+      "reverse": "images/coins/firstkyat/1kyat-reverse.jpg"
     }
   },
   {
@@ -126,8 +126,8 @@
     "issue_year": 1853,
     "note": "ရွှေဒင်္ဂါး (တပဲစေ့)",
     "images": {
-      "obverse": "images/coins/first-kyat/1pe-gold-obverse.jpg",
-      "reverse": "images/coins/first-kyat/1pe-gold-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1pe-gold-obverse.png",
+      "reverse": "images/coins/firstkyat/1pe-gold-reverse.png"
     }
   },
   {
@@ -142,8 +142,8 @@
     "issue_year": 1853,
     "note": "ရွှေဒင်္ဂါး (တမူးစေ့)",
     "images": {
-      "obverse": "images/coins/first-kyat/1mu-gold-obverse.jpg",
-      "reverse": "images/coins/first-kyat/1mu-gold-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1mu-gold-obverse.jpg",
+      "reverse": "images/coins/firstkyat/1mu-gold-reverse.jpg"
     }
   },
   {
@@ -536,7 +536,7 @@
     "note": "FAO (ကုလသမဂ္ဂ စားနပ်ရိက္ခာနှင့် စိုက်ပျိုးရေးအဖွဲ့) အထိမ်းအမှတ် ၁ ကျပ်ဒင်္ဂါး။ ဗဟိုဘဏ် ဇယားအရ ၁၉၇၆ ဇူလိုင် ၁၆ ရက်တွင် စတင်သုံးစွဲခဲ့သည်။  Security Printing Works Factory နှင့် ဆက်စပ်သည်။ ပယ်ဖျက်သည့်ရက်စွဲ မသိရသေးပါ။",
     "images": {
       "obverse": "images/coins/fao-series/1976-fao/1kyat-obverse.jpg",
-      "reverse": "images/coins/fao/series/1976-fao/1kyat-reverse.jpg"
+      "reverse": "images/coins/fao-series/1976-fao/1kyat-reverse.jpg"
     }
   },
   {
@@ -560,7 +560,7 @@
   "note": "ကုလသမဂ္ဂ စားနပ်ရိက္ခာနှင့် စိုက်ပျိုးရေးအဖွဲ့ (FAO) အထိမ်းအမှတ် ၅၀ ပြားတန် ဒင်္ဂါးဖြစ်ပြီး Security Printing Works Factory တွင် သွန်းလုပ်ခဲ့သည်။ CBM မှတ်တမ်းအရ ၁၉၇၉ ခုနှစ်တွင် ထွက်ရှိခဲ့သော်လည်း ဒင်္ဂါးပေါ်တွင် ၁၉၇၅ ခုနှစ်ကို ရိုက်နှိပ်ထားသည်ကို တွေ့ရှိရသဖြင့် ရိုက်လုပ်ခုနှစ်နှင့် ထုတ်ဝေခုနှစ် ကွဲလွဲနေကြောင်း သတိပြုသင့်သည်။ ပယ်ဖျက်ခဲ့သည့် အတိအကျရက်စွဲကို မသိရသေးပါ။",
   "images": {
     "obverse": "images/coins/fao-series/1979-fao/50pyas-obverse.jpg",
-    "reverse": "images/coin/fao-series/1979-fao/50pyas-reverse.jpg"
+    "reverse": "images/coins/fao-series/1979-fao/50pyas-reverse.jpg"
   }
 },
 {
@@ -631,8 +631,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၂၅ ပြား (ခြောက်ထောင့်)။ ဗဟိုဘဏ် ဇယားအရ ၁၉၈၆ ဒီဇင်ဘာ ၁ ရက်တွင် ထုတ်ဝေသည်။ ယခင် အဝိုင်းပုံ ၂၅ ပြားကို ၁၀ ပြားနှင့် ၅၀ ပြားနှင့် မရောထွေးစေရန် ခြောက်ထောင့်သို့ ပြောင်းလဲခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/25pyas-1986-obverse.jpg",
-      "reverse": "images/coins/fao-series/25pyas-1986-reverse.jpg"
+      "obverse": "images/coins/fao-series/25pyas-1986-obverse.png",
+      "reverse": "images/coins/fao-series/25pyas-1986-reverse.png"
     }
   },
   {
@@ -655,8 +655,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၅ ပြား။ CBM Series ဇယားအရ ၁၉၈၇ ဇွန် ၃၀ ရက်တွင် ထုတ်ဝေသည်။  ၅ ပြားနှင့် ၂၅ ပြားကို ၁၉၈၇ တွင် နောက်ဆုံး သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/5pyas-1987-obverse.jpg",
-      "reverse": "images/coins/fao-series/5pyas-1987-reverse.jpg"
+      "obverse": "images/coins/fao-series/5pyas-1987-obverse.png",
+      "reverse": "images/coins/fao-series/5pyas-1987-reverse.png"
     }
   },
   {
@@ -679,8 +679,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၅၀ ပြား (၁၉၉၁)။ ၁၉၈၈ နောက်ပိုင်း SLORC လက်ထက် မြန်မာနိုင်ငံတော် ဗဟိုဘဏ် အမည်ဖြင့် ထုတ်ဝေသည်။ ၁၀ ပြားနှင့် ၅၀ ပြားကို ၁၉၉၁ တွင် နောက်ဆုံး သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/50pyas-1991-obverse.jpg",
-      "reverse": "images/coins/fao-series/50pyas-1991-reverse.jpg"
+      "obverse": "images/coins/fao-series/50pyas-1991-obverse.png",
+      "reverse": "images/coins/fao-series/50pyas-1991-reverse.png"
     }
   },
   {
@@ -703,8 +703,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၂၅ ပြား (ခြောက်ထောင့်၊ ၁၉၉၁)။ CBM Series ဇယားအရ ၁၉၉၁ ဧပြီ ၁ ရက်တွင် ထုတ်ဝေသည်။  ဗဟိုဘဏ် အမည်ဖြင့် ထုတ်ဝေသော FAO စီးရီး။",
     "images": {
-      "obverse": "images/coins/fao-series/25pyas-1991-obverse.jpg",
-      "reverse": "images/coins/fao-series/25pyas-1991-reverse.jpg"
+      "obverse": "images/coins/fao-series/25pyas-1991-obverse.png",
+      "reverse": "images/coins/fao-series/25pyas-1991-reverse.png"
     }
   },
   {
@@ -727,8 +727,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၁၀ ပြား (၁၉၉၂)။ CBM Series ဇယားအရ ၁၉၉၂ ဧပြီ ၁ ရက်တွင် ထုတ်ဝေသည်။ ၁၀ ပြားနှင့် ၅၀ ပြားကို ၁၉၉၁–၉၂ ခန့်တွင် နောက်ဆုံး သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/10pyas-1992-obverse.jpg",
-      "reverse": "images/coins/fao-series/10pyas-1992-reverse.jpg"
+      "obverse": "images/coins/fao-series/10pyas-1992-obverse.png",
+      "reverse": "images/coins/fao-series/10pyas-1992-reverse.png"
     }
   },
     {
