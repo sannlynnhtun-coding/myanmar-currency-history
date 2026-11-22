@@ -391,7 +391,7 @@
 
     async function loadCatalog() {
       const catalogs = await Promise.all(['periods', 'coins', 'banknotes'].map(async name => {
-        const response = await fetch(`data/${name}.json`);
+        const response = await fetch(`data/${name}.json`, { cache: 'no-store' });
         if (!response.ok) throw new Error(`Cannot load ${name}.json (${response.status})`);
         const data = await response.json();
         if (!Array.isArray(data) || (name === 'periods' && !data.length)) {
