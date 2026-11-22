@@ -18,8 +18,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၁ ပဲ)၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ",
     "images": {
-      "obverse": "images/coins/firstkyat/1pe-obverse.jpg",
-      "reverse": "images/coins/firstkyat/1pe-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1pe-obverse-transparent.png",
+      "reverse": "images/coins/firstkyat/1pe-reverse-transparent.png"
     }
   },
   {
@@ -41,8 +41,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၁ မူး = ၂ပဲ )၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ",
     "images": {
-      "obverse": "images/coins/firstkyat/1mu-obverse.jpg",
-      "reverse": "images/coins/firstkyat/1mu-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1mu-obverse-transparent.png",
+      "reverse": "images/coins/firstkyat/1mu-reverse-transparent.png"
     }
   },
   {
@@ -64,8 +64,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၁ မတ် = ၄ ပဲ)၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ",
     "images": {
-      "obverse": "images/coins/firstkyat/1mat-obverse.jpg",
-      "reverse": "images/coins/firstkyat/1mat-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1mat-obverse-transparent.png",
+      "reverse": "images/coins/firstkyat/1mat-reverse-transparent.png"
     }
   },
   {
@@ -87,8 +87,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တစ်ခု (၅ မူး = ၈ ပဲ) ၊ ပယ်ဖျက်ထားသည့်ရက်စွဲမသိရပါ ",
     "images": {
-      "obverse": "images/coins/firstkyat/5mu-obverse.jpg",
-      "reverse": "images/coins/firstkyat/5mu-reverse.jpg"
+      "obverse": "images/coins/firstkyat/5mu-obverse-transparent.png",
+      "reverse": "images/coins/firstkyat/5mu-reverse-transparent.png"
     }
   },
   {
@@ -110,8 +110,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "ငွေဒင်္ဂါး ၅ မျိုးအနက် တန်ဖိုးအကြီးဆုံး (1ကျပ်)",
     "images": {
-      "obverse": "images/coins/firstkyat/1kyat-obverse.jpg",
-      "reverse": "images/coins/firstkyat/1kyat-reverse.jpg"
+      "obverse": "images/coins/firstkyat/1kyat-obverse-transparent.png",
+      "reverse": "images/coins/firstkyat/1kyat-reverse-transparent.png"
     }
   },
   {
@@ -126,8 +126,8 @@
     "issue_year": 1853,
     "note": "ရွှေဒင်္ဂါး (တပဲစေ့)",
     "images": {
-      "obverse": "images/coins/firstkyat/1pe-gold-obverse.png",
-      "reverse": "images/coins/firstkyat/1pe-gold-reverse.png"
+      "obverse": "images/coins/firstkyat/1pe-gold-obverse-transparent.png",
+      "reverse": "images/coins/firstkyat/1pe-gold-reverse-transparent.png"
     }
   },
   {
@@ -165,8 +165,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "လွတ်လပ်ရေးရပြီး ပထမဆုံး ဒင်္ဂါးစီးရီး။ ရူပီးစနစ် (၁ ရူပီး = ၁၆ ပဲ = ၆၄ ပြား)။ ၁၉၄၉ ခုနှစ်တွင် လန်ဒန်မြို့၌ သွန်းလုပ်၍ ၁၉၅၀ ပြည့်နှစ် ဇူလိုင်လ ၂၀ ရက်နေ့တွင် စတင်သုံးစွဲခဲ့သည်။ ၁ ပဲ၊ ၂ ပဲနှင့် ၂ ပြား(= ½ ပဲ)ဒင်္ဂါးများကို ၁၉၅၃ ခုနှစ် နိုဝင်ဘာလ ၁ ရက်နေ့တွင် ပယ်ဖျက်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1949-series/2pyas-obverse.jpg",
-      "reverse": "images/coins/1949-series/2pyas-reverse.jpg"
+      "obverse": "images/coins/1949-series/2pyas-obverse-transparent.png",
+      "reverse": "images/coins/1949-series/2pyas-reverse-transparent.png"
     }
   },
   {
@@ -188,8 +188,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "လွတ်လပ်ရေးရပြီး ပထမဆုံး ဒင်္ဂါးစီးရီး။ ရူပီးစနစ် (၁ ရူပီး = ၁၆ ပဲ = ၆၄ ပြား)။ ၁၉၄၉ ခုနှစ်တွင် လန်ဒန်မြို့၌ သွန်းလုပ်၍ ၁၉၅၀ ပြည့်နှစ် ဇူလိုင်လ ၂၀ ရက်နေ့တွင် စတင်သုံးစွဲခဲ့သည်။ ၁ ပဲ၊ ၂ ပဲနှင့် ၂ ပြား(= ½ ပဲ)ဒင်္ဂါးများကို ၁၉၅၃ ခုနှစ် နိုဝင်ဘာလ ၁ ရက်နေ့တွင် ပယ်ဖျက်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1949-series/1pe-obverse.jpg",
-      "reverse": "images/coins/1949-series/1pe-reverse.jpg"
+      "obverse": "images/coins/1949-series/1pe-obverse-transparent.png",
+      "reverse": "images/coins/1949-series/1pe-reverse-transparent.png"
     }
   },
   {
@@ -211,8 +211,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "လွတ်လပ်ရေးရပြီး ပထမဆုံး ဒင်္ဂါးစီးရီး။ ရူပီးစနစ် (၁ ရူပီး = ၁၆ ပဲ = ၆၄ ပြား)။ ၁၉၄၉ ခုနှစ်တွင် လန်ဒန်မြို့၌ သွန်းလုပ်၍ ၁၉၅၀ ပြည့်နှစ် ဇူလိုင်လ ၂၀ ရက်နေ့တွင် စတင်သုံးစွဲခဲ့သည်။ ၁ ပဲ၊ ၂ ပဲနှင့် ၂ ပြား (= ½ ပဲ) ဒင်္ဂါးများကို ၁၉၅၃ ခုနှစ် နိုဝင်ဘာလ ၁ ရက်နေ့တွင် ပယ်ဖျက်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1949-series/2pe-obverse.jpg",
-      "reverse": "images/coins/1949-series/2pe-reverse.jpg"
+      "obverse": "images/coins/1949-series/2pe-obverse-transparent.png",
+      "reverse": "images/coins/1949-series/2pe-reverse-transparent.png"
     }
   },
   {
@@ -234,8 +234,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "လွတ်လပ်ရေးရပြီး ပထမဆုံး ဒင်္ဂါးစီးရီး။ ရူပီးစနစ် (၁ ရူပီး = ၁၆ ပဲ = ၆၄ ပြား)။ ၁၉၄၉ ခုနှစ်တွင် လန်ဒန်မြို့၌ သွန်းလုပ်၍ ၁၉၅၀ ပြည့်နှစ် ဇူလိုင်လ ၂၀ ရက်နေ့တွင် စတင်သုံးစွဲခဲ့သည်။ ပယ်ဖျက်သည့်ရက်စွဲကို အတိအကျ မသိရသေးပါ။",
     "images": {
-      "obverse": "images/coins/1949-series/4pe-obverse.jpg",
-      "reverse": "images/coins/1949-series/4pe-reverse.jpg"
+      "obverse": "images/coins/1949-series/4pe-obverse-transparent.png",
+      "reverse": "images/coins/1949-series/4pe-reverse-transparent.png"
     }
   },
   {
@@ -257,8 +257,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "လွတ်လပ်ရေးရပြီး ပထမဆုံး ဒင်္ဂါးစီးရီး။ ရူပီးစနစ် (၁ ရူပီး = ၁၆ ပဲ = ၆၄ ပြား)။ ၁၉၄၉ ခုနှစ်တွင် လန်ဒန်မြို့၌ သွန်းလုပ်၍ ၁၉၅၀ ပြည့်နှစ် ဇူလိုင်လ ၂၀ ရက်နေ့တွင် စတင်သုံးစွဲခဲ့သည်။ ပယ်ဖျက်သည့်ရက်စွဲကို အတိအကျ မသိရသေးပါ။",
     "images": {
-      "obverse": "images/coins/1949-series/8pe-obverse.jpg",
-      "reverse": "images/coins/1949-series/8pe-reverse.jpg"
+      "obverse": "images/coins/1949-series/8pe-obverse-transparent.png",
+      "reverse": "images/coins/1949-series/8pe-reverse-transparent.png"
     }
   },
   {
@@ -280,8 +280,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ပထမ ဒဿမဒင်္ဂါးစီးရီး (ခြင်္သေ့)။ ၁၉၅၂ ခုနှစ် ဇူလိုင် ၁ ရက်တွင် ရူပီးအစား ကျပ်ငွေ စတင်သုံးစွဲပြီး တစ်ကျပ် = ပြား ၁၀၀ ဒဿမစနစ်သို့ ပြောင်းလဲခဲ့သည်။ ပြည်ထောင်စုမြန်မာနိုင်ငံဘဏ်က Royal Mint သို့ မှာယူသော ဒဿမဒင်္ဂါးများတွင် ၁၊ ၅၊ ၁၀၊ ၂၅၊ ၅၀ ပြားနှင့် ၁ ကျပ် ပါဝင်သည်။ ခြင်္သေ့ပုံ ဆက်လက်ထားရှိပြီး စာတန်းများ ပိုမိုပါဝင်သည်။ CBM History အရ ၁၉၅၂ အောက်တိုဘာ ၁ ရက်တွင် ၅ ပြားနှင့် ၁၀ ပြားမှ စတင်လည်ပတ်ခဲ့သည်။ CBM Series ဇယားတွင် Issue Date ကို ၁၉၅၆ ဟု ဖော်ပြထားသည်။ ဤဒင်္ဂါးပေါ်တွင် ခရစ်နှစ် ၁၉၅၃ နှင့် မြန်မာသက္ကရာဇ် ၁၃၁၈ ရိုက်ထားသည်။ ၁၉၅၂ မှ ၁၉၆၅ ခန့်အထိ ခုနှစ်အမျိုးမျိုးဖြင့် သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1956-series/1kyat-obverse.jpg",
-      "reverse": "images/coins/1956-series/1kyat-reverse.jpg"
+      "obverse": "images/coins/1956-series/1kyat-obverse-transparent.png",
+      "reverse": "images/coins/1956-series/1kyat-reverse-transparent.png"
     }
   },
   {
@@ -303,8 +303,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ပထမ ဒဿမဒင်္ဂါးစီးရီး (ခြင်္သေ့)။ ၁၉၅၂ တွင် ဒဿမစနစ် စတင်ပြီးနောက် Royal Mint မှ မှာယူထုတ်လုပ်သော ဒင်္ဂါးများအနက် တစ်ခု။ ယခင် ရူပီးခေတ်တွင် တစ်ရူပီး = ၁၆ ပဲ (၆၄ ပြား) ဖြစ်ပြီး ၁၉၅၂ မှစ၍ တစ်ကျပ် = ပြား ၁၀၀ ဖြစ်သည်။ ဤဒင်္ဂါးပေါ်တွင် ခရစ်နှစ် ၁၉၆၁ နှင့် မြန်မာသက္ကရာဇ် ၁၃၂၃ ရိုက်ထားသည်။ ၁၉၆၆ တွင် အလူမီနီယမ် + ဗိုလ်ချုပ်ပုံ စီးရီး မထွက်မီအထိ သုံးစွဲခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1956-series/50pyas-obverse.jpg",
-      "reverse": "images/coins/1956-series/50pyas-reverse.jpg"
+      "obverse": "images/coins/1956-series/50pyas-obverse-transparent.png",
+      "reverse": "images/coins/1956-series/50pyas-reverse-transparent.png"
     }
   },
   {
@@ -326,8 +326,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ပထမ ဒဿမဒင်္ဂါးစီးရီး (ခြင်္သေ့)။ ၁၉၅၂ ဇူလိုင်တွင် ငွေကြေးထုတ်ဝေခွင့်ကို ပြည်ထောင်စုမြန်မာနိုင်ငံဘဏ်သို့ လွှဲပြောင်းပြီး ဒဿမစနစ် စတင်ခဲ့သည်။ ခြင်္သေ့ပုံပါ ဒင်္ဂါးများကို Royal Mint မှ မှာယူခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1956-series/25pyas-obverse.jpg",
-      "reverse": "images/coins/1956-series/25pyas-reverse.jpg"
+      "obverse": "images/coins/1956-series/25pyas-obverse-transparent.png",
+      "reverse": "images/coins/1956-series/25pyas-reverse-transparent.png"
     }
   },
   {
@@ -349,8 +349,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ပထမ ဒဿမဒင်္ဂါးစီးရီး (ခြင်္သေ့)။ CBM History အရ ၁၉၅၂ အောက်တိုဘာ ၁ ရက်တွင် ၅ ပြားနှင့်အတူ စတင်လည်ပတ်ခဲ့သော ဒင်္ဂါးများအနက် တစ်ခုဖြစ်သည်။ ၁၉၆၆ အလူမီနီယမ်စီးရီး မတိုင်မီအထိ သွန်းလုပ်သုံးစွဲခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1956-series/10pyas-obverse.jpg",
-      "reverse": "images/coins/1956-series/10pyas-reverse.jpg"
+      "obverse": "images/coins/1956-series/10pyas-obverse-transparent.png",
+      "reverse": "images/coins/1956-series/10pyas-reverse-transparent.png"
     }
   },
   {
@@ -372,8 +372,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ပထမ ဒဿမဒင်္ဂါးစီးရီး (ခြင်္သေ့)။ ၁၉၅၂ အောက်တိုဘာ ၁ ရက်တွင် ၁၀ ပြားနှင့်အတူ ပထမဆုံး လည်ပတ်ခဲ့သည် (CBM History)။  ယခင် ပဲစီးရီး (½၊ ၁၊ ၂ ပဲ) ကို ၁၉၅၃ နိုဝင်ဘာ ၁ ရက်တွင် ပယ်ဖျက်ပြီးနောက် ဒဿမပြားဒင်္ဂါးများ အဓိက ဖြစ်လာသည်။",
     "images": {
-      "obverse": "images/coins/1956-series/5pyas-obverse.jpg",
-      "reverse": "images/coins/1956-series/5pyas-reverse.jpg"
+      "obverse": "images/coins/1956-series/5pyas-obverse-transparent.png",
+      "reverse": "images/coins/1956-series/5pyas-reverse-transparent.png"
     }
   },
 
@@ -396,8 +396,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ပထမ ဒဿမဒင်္ဂါးစီးရီး (ခြင်္သေ့)။ ၁၉၅၂ ဒဿမပြုပြင်မှုအပြီး ထုတ်လုပ်သော အသေးဆုံးတန်ဖိုး။ CBM Series ဇယားတွင် Issue Date ၁၉၅၆၊ Diameter ၁၈ mm၊ Weight ၂.၂ g။ ဖွဲ့စည်းမှု ကြေးဝါ (ကြေးနီ ၉၅.၅% - သံဖြူ ၃% - သွပ် ၁.၅%) ဖြစ်ပြီး အခြားတန်ဖိုးများ၏ ကြေးနီ-နီကယ်နှင့် ကွာခြားသည်။ ၁၉၆၆ တွင် အလူမီနီယမ်စီးရီးသို့ ပြောင်းလဲသည်အထိ သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/1956-series/1pya-obverse.jpg",
-      "reverse": "images/coins/1956-series/1pya-reverse.jpg"
+      "obverse": "images/coins/1956-series/1pya-obverse-transparent.png",
+      "reverse": "images/coins/1956-series/1pya-reverse-transparent.png"
     }
   },
   {
@@ -419,8 +419,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ဒုတိယ ဒဿမဒင်္ဂါးစီးရီး။ ခြင်္သေ့ပုံအစား ဗိုလ်ချုပ်အောင်ဆန်းပုံကို ပထမဆုံး ထည့်သွင်းထားသည်။ တော်လှန်ရေးအစိုးရ လက်ထက်တွင် ၁၉၆၅ ဧပြီ ၃၀ ၌ ပြည်သူ့ဘဏ် ငွေစက္ကူများ ထုတ်ဝေပြီးနောက် ၁၉၆၆ အောက်တိုဘာ ၁၅ ရက်တွင် ဤအလူမီနီယမ်ဒင်္ဂါးများကို စတင်သုံးစွဲခဲ့သည် (CBM Series ဇယား)အရ အရွယ်အစား သေးငယ်ပြီး အလေးချိန် ပေါ့ပါးသည်။ ပယ်ဖျက်သည့်ရက်စွဲကို အတိအကျ မသိရသေးပါ။",
     "images": {
-      "obverse": "images/coins/1966-series/1pya-obverse.jpg",
-      "reverse": "images/coins/1966-series/1pya-reverse.jpg"
+      "obverse": "images/coins/1966-series/1pya-obverse-transparent.png",
+      "reverse": "images/coins/1966-series/1pya-reverse-transparent.png"
     }
   },
   {
@@ -442,8 +442,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ဒုတိယ ဒဿမဒင်္ဂါးစီးရီး။ ဗိုလ်ချုပ်အောင်ဆန်းပုံပါ ပထမဆုံး ဒင်္ဂါးစီးရီး။ ၁၉၆၆ အောက်တိုဘာ ၁၅ ရက်တွင် စတင်သုံးစွဲ (CBM)။ ယခင် ၁၉၅၂–၆၅ ခြင်္သေ့ ကြေးနီ-နီကယ် စီးရီးကို အစားထိုးသည်။",
     "images": {
-      "obverse": "images/coins/1966-series/5pyas-obverse.jpg",
-      "reverse": "images/coins/1966-series/5pyas-reverse.jpg"
+      "obverse": "images/coins/1966-series/5pyas-obverse-transparent.png",
+      "reverse": "images/coins/1966-series/5pyas-reverse-transparent.png"
     }
   },
   {
@@ -465,8 +465,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ဒုတိယ ဒဿမဒင်္ဂါးစီးရီး။ ဗိုလ်ချုပ်အောင်ဆန်းပုံပါ ပထမဆုံး ဒင်္ဂါးစီးရီး။ ၁၉၆၆ အောက်တိုဘာ ၁၅ ရက်တွင် စတင်သုံးစွဲသည်(CBM Series)။",
     "images": {
-      "obverse": "images/coins/1966-series/10pyas-obverse.jpg",
-      "reverse": "images/coins/1966-series/10pyas-reverse.jpg"
+      "obverse": "images/coins/1966-series/10pyas-obverse-transparent.png",
+      "reverse": "images/coins/1966-series/10pyas-reverse-transparent.png"
     }
   },
   {
@@ -488,8 +488,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ဒုတိယ ဒဿမဒင်္ဂါးစီးရီး။ ဗိုလ်ချုပ်အောင်ဆန်းပုံပါ ပထမဆုံး ဒင်္ဂါးစီးရီး။ ၁၉၆၆ အောက်တိုဘာ ၁၅ ရက်တွင် စတင်သုံးစွဲ (CBM)သည်။",
     "images": {
-      "obverse": "images/coins/1966-series/25pyas-obverse.jpg",
-      "reverse": "images/coins/1966-series/25pyas-reverse.jpg"
+      "obverse": "images/coins/1966-series/25pyas-obverse-transparent.png",
+      "reverse": "images/coins/1966-series/25pyas-reverse-transparent.png"
     }
   },
   {
@@ -511,8 +511,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "တတိယကျပ်ငွေ၏ ဒုတိယ ဒဿမဒင်္ဂါးစီးရီး။ ဗိုလ်ချုပ်အောင်ဆန်းပုံပါ ပထမဆုံး ဒင်္ဂါးစီးရီး။ ၁၉၆၆ အောက်တိုဘာ ၁၅ ရက်တွင် စတင်သုံးစွဲ (CBM Series ဇယား)။ ဤစီးရီးတွင် ၁ ကျပ် ဒင်္ဂါး မပါဝင်ပါ။",
     "images": {
-      "obverse": "images/coins/1966-series/50pyas-obverse.jpg",
-      "reverse": "images/coins/1966-series/50pyas-reverse.jpg"
+      "obverse": "images/coins/1966-series/50pyas-obverse-transparent.png",
+      "reverse": "images/coins/1966-series/50pyas-reverse-transparent.png"
     }
   },
   {
@@ -535,8 +535,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO (ကုလသမဂ္ဂ စားနပ်ရိက္ခာနှင့် စိုက်ပျိုးရေးအဖွဲ့) အထိမ်းအမှတ် ၁ ကျပ်ဒင်္ဂါး။ ဗဟိုဘဏ် ဇယားအရ ၁၉၇၆ ဇူလိုင် ၁၆ ရက်တွင် စတင်သုံးစွဲခဲ့သည်။  Security Printing Works Factory နှင့် ဆက်စပ်သည်။ ပယ်ဖျက်သည့်ရက်စွဲ မသိရသေးပါ။",
     "images": {
-      "obverse": "images/coins/fao-series/1976-fao/1kyat-obverse.jpg",
-      "reverse": "images/coins/fao-series/1976-fao/1kyat-reverse.jpg"
+      "obverse": "images/coins/fao-series/1976-fao/1kyat-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/1976-fao/1kyat-reverse-transparent.png"
     }
   },
   {
@@ -559,8 +559,8 @@
   "status": "ပယ်ဖျက်ပြီး",
   "note": "ကုလသမဂ္ဂ စားနပ်ရိက္ခာနှင့် စိုက်ပျိုးရေးအဖွဲ့ (FAO) အထိမ်းအမှတ် ၅၀ ပြားတန် ဒင်္ဂါးဖြစ်ပြီး Security Printing Works Factory တွင် သွန်းလုပ်ခဲ့သည်။ CBM မှတ်တမ်းအရ ၁၉၇၉ ခုနှစ်တွင် ထွက်ရှိခဲ့သော်လည်း ဒင်္ဂါးပေါ်တွင် ၁၉၇၅ ခုနှစ်ကို ရိုက်နှိပ်ထားသည်ကို တွေ့ရှိရသဖြင့် ရိုက်လုပ်ခုနှစ်နှင့် ထုတ်ဝေခုနှစ် ကွဲလွဲနေကြောင်း သတိပြုသင့်သည်။ ပယ်ဖျက်ခဲ့သည့် အတိအကျရက်စွဲကို မသိရသေးပါ။",
   "images": {
-    "obverse": "images/coins/fao-series/1979-fao/50pyas-obverse.jpg",
-    "reverse": "images/coins/fao-series/1979-fao/50pyas-reverse.jpg"
+    "obverse": "images/coins/fao-series/1979-fao/50pyas-obverse-transparent.png",
+    "reverse": "images/coins/fao-series/1979-fao/50pyas-reverse-transparent.png"
   }
 },
 {
@@ -583,8 +583,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၂၅ ပြား (အဝိုင်း)။ CBM Series ဇယားအရ ၁၉၈၁ ဇူလိုင် ၃၁ ရက်တွင် ထုတ်ဝေသည်။ နောက်ပိုင်းတွင် ၁၀ ပြားနှင့် ၅၀ ပြားနှင့် မရောထွေးစေရန် ခြောက်ထောင့်ပုံသို့ ပြောင်းသည်။",
     "images": {
-      "obverse": "images/coins/fao-series/1981-fao/25pyas-obverse.jpg",
-      "reverse": "images/coins/fao-series/1981-fao/25pyas-reverse.jpg"
+      "obverse": "images/coins/fao-series/1981-fao/25pyas-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/1981-fao/25pyas-reverse-transparent.png"
     }
   },
   {
@@ -607,8 +607,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၁၀ ပြား။ CBM Series ဇယားအရ ၁၉၈၃ ဖေဖော်ဝါရီ ၂၈ ရက်တွင် ထုတ်ဝေသည်။  ၁၉၈၃ တွင် ၅၊ ၁၀၊ ၂၅၊ ၅၀ ပြားကို ကြေးနီ-ခဲမဖြူ/ကြေးဝါဖြင့် အသစ်သွန်းလုပ်ခဲ့သည်။ 'Burma' အမည်အောက် နောက်ဆုံး စီးရီးများအနက် တစ်ခုဖြစ်သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/1983-fao/10pyas-obverse.jpg",
-      "reverse": "images/coins/fao-series/1983-fao/10pyas-reverse.jpg"
+      "obverse": "images/coins/fao-series/1983-fao/10pyas-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/1983-fao/10pyas-reverse-transparent.png"
     }
   },
   {
@@ -631,8 +631,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၂၅ ပြား (ခြောက်ထောင့်)။ ဗဟိုဘဏ် ဇယားအရ ၁၉၈၆ ဒီဇင်ဘာ ၁ ရက်တွင် ထုတ်ဝေသည်။ ယခင် အဝိုင်းပုံ ၂၅ ပြားကို ၁၀ ပြားနှင့် ၅၀ ပြားနှင့် မရောထွေးစေရန် ခြောက်ထောင့်သို့ ပြောင်းလဲခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/25pyas-1986-obverse.png",
-      "reverse": "images/coins/fao-series/25pyas-1986-reverse.png"
+      "obverse": "images/coins/fao-series/25pyas-1986-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/25pyas-1986-reverse-transparent.png"
     }
   },
   {
@@ -655,8 +655,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၅ ပြား။ CBM Series ဇယားအရ ၁၉၈၇ ဇွန် ၃၀ ရက်တွင် ထုတ်ဝေသည်။  ၅ ပြားနှင့် ၂၅ ပြားကို ၁၉၈၇ တွင် နောက်ဆုံး သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/5pyas-1987-obverse.png",
-      "reverse": "images/coins/fao-series/5pyas-1987-reverse.png"
+      "obverse": "images/coins/fao-series/5pyas-1987-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/5pyas-1987-reverse-transparent.png"
     }
   },
   {
@@ -679,8 +679,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၅၀ ပြား (၁၉၉၁)။ ၁၉၈၈ နောက်ပိုင်း SLORC လက်ထက် မြန်မာနိုင်ငံတော် ဗဟိုဘဏ် အမည်ဖြင့် ထုတ်ဝေသည်။ ၁၀ ပြားနှင့် ၅၀ ပြားကို ၁၉၉၁ တွင် နောက်ဆုံး သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/50pyas-1991-obverse.png",
-      "reverse": "images/coins/fao-series/50pyas-1991-reverse.png"
+      "obverse": "images/coins/fao-series/50pyas-1991-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/50pyas-1991-reverse-transparent.png"
     }
   },
   {
@@ -703,8 +703,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၂၅ ပြား (ခြောက်ထောင့်၊ ၁၉၉၁)။ CBM Series ဇယားအရ ၁၉၉၁ ဧပြီ ၁ ရက်တွင် ထုတ်ဝေသည်။  ဗဟိုဘဏ် အမည်ဖြင့် ထုတ်ဝေသော FAO စီးရီး။",
     "images": {
-      "obverse": "images/coins/fao-series/25pyas-1991-obverse.png",
-      "reverse": "images/coins/fao-series/25pyas-1991-reverse.png"
+      "obverse": "images/coins/fao-series/25pyas-1991-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/25pyas-1991-reverse-transparent.png"
     }
   },
   {
@@ -727,8 +727,8 @@
     "status": "ပယ်ဖျက်ပြီး",
     "note": "FAO အထိမ်းအမှတ် ၁၀ ပြား (၁၉၉၂)။ CBM Series ဇယားအရ ၁၉၉၂ ဧပြီ ၁ ရက်တွင် ထုတ်ဝေသည်။ ၁၀ ပြားနှင့် ၅၀ ပြားကို ၁၉၉၁–၉၂ ခန့်တွင် နောက်ဆုံး သွန်းလုပ်ခဲ့သည်။",
     "images": {
-      "obverse": "images/coins/fao-series/10pyas-1992-obverse.png",
-      "reverse": "images/coins/fao-series/10pyas-1992-reverse.png"
+      "obverse": "images/coins/fao-series/10pyas-1992-obverse-transparent.png",
+      "reverse": "images/coins/fao-series/10pyas-1992-reverse-transparent.png"
     }
   },
     {
@@ -751,8 +751,8 @@
       "status": "ပယ်ဖျက်ပြီး",
       "note": "ဗဟိုဘဏ် လက်ထက် ခြင်္သေ့စီးရီး။ CBM Series ဇယားအရ ၂၀၀၀ မတ် ၂၄ ရက်တွင် ထုတ်ဝေသည်။ ဒင်္ဂါးပေါ်တွင် ၁၉၉၉ ခုနှစ် ရိုက်ထားသည်။ လက်တင်စာလုံး (CENTRAL BANK OF MYANMAR / KYAT) ပါဝင်သော ပထမဆုံး မြန်မာဒင်္ဂါးများအနက် တစ်ခုဖြစ်သည်။ ဟောင်းနွမ်းငွေစက္ကူအစားသုံးရန် ရည်ရွယ်ခဲ့သော်လည်း ငွေကြေးဖောင်းပွမှုကြောင့် နောက်ပိုင်း အသုံးနည်းသွားသည်။",
       "images": {
-        "obverse": "images/coins/2000-series/1kyat-obverse.jpg",
-        "reverse": "images/coins/2000-series/1kyat-reverse.jpg"
+        "obverse": "images/coins/2000-series/1kyat-obverse-transparent.png",
+        "reverse": "images/coins/2000-series/1kyat-reverse-transparent.png"
       }
     },
     {
@@ -775,8 +775,8 @@
       "status": "ပယ်ဖျက်ပြီး",
       "note": "ဗဟိုဘဏ် လက်ထက် ခြင်္သေ့စီးရီး။ CBM Series ဇယားအရ ၂၀၀၀ မတ် ၂၄ ရက်တွင် ထုတ်ဝေသည်။ ဒင်္ဂါးပေါ်တွင် ၁၉၉၉ ခုနှစ် ရိုက်ထားသည်။ လက်တင်စာလုံး (CENTRAL BANK OF MYANMAR / KYAT) ပါဝင်သော ပထမဆုံး မြန်မာဒင်္ဂါးများအနက် တစ်ခုဖြစ်သည်။ ဟောင်းနွမ်းငွေစက္ကူအစားသုံးရန် ရည်ရွယ်ခဲ့သော်လည်း ငွေကြေးဖောင်းပွမှုကြောင့် နောက်ပိုင်း အသုံးနည်းသွားသည်။",
       "images": {
-        "obverse": "images/coins/2000-series/5kyats-obverse.jpg",
-        "reverse": "images/coins/2000-series/5kyats-reverse.jpg"
+        "obverse": "images/coins/2000-series/5kyats-obverse-transparent.png",
+        "reverse": "images/coins/2000-series/5kyats-reverse-transparent.png"
       }
     },
     {
@@ -799,8 +799,8 @@
       "status": "ပယ်ဖျက်ပြီး",
       "note": "ဗဟိုဘဏ် လက်ထက် ခြင်္သေ့စီးရီး။ CBM Series ဇယားအရ ၂၀၀၀ မတ် ၂၄ ရက်တွင် ထုတ်ဝေသည်။ ဒင်္ဂါးပေါ်တွင် ၁၉၉၉ ခုနှစ် ရိုက်ထားသည်။ လက်တင်စာလုံး (CENTRAL BANK OF MYANMAR / KYAT) ပါဝင်သော ပထမဆုံး မြန်မာဒင်္ဂါးများအနက် တစ်ခုဖြစ်သည်။ ဟောင်းနွမ်းငွေစက္ကူအစားသုံးရန် ရည်ရွယ်ခဲ့သော်လည်း ငွေကြေးဖောင်းပွမှုကြောင့် နောက်ပိုင်း အသုံးနည်းသွားသည်။",
       "images": {
-        "obverse": "images/coins/2000-series/10kyats-obverse.jpg",
-        "reverse": "images/coins/2000-series/10kyats-reverse.jpg"
+        "obverse": "images/coins/2000-series/10kyats-obverse-transparent.png",
+        "reverse": "images/coins/2000-series/10kyats-reverse-transparent.png"
       }
     },
     {
@@ -823,8 +823,8 @@
       "status": "ပယ်ဖျက်ပြီး",
       "note": "ဗဟိုဘဏ် လက်ထက် ခြင်္သေ့စီးရီး။ CBM Series ဇယားအရ ၂၀၀၀ မတ် ၂၄ ရက်တွင် ထုတ်ဝေသည်။ ဒင်္ဂါးပေါ်တွင် ၁၉၉၉ ခုနှစ် ရိုက်ထားသည်။ လက်တင်စာလုံး (CENTRAL BANK OF MYANMAR / KYAT) ပါဝင်သော ပထမဆုံး မြန်မာဒင်္ဂါးများအနက် တစ်ခုဖြစ်သည်။ ဟောင်းနွမ်းငွေစက္ကူအစားသုံးရန် ရည်ရွယ်ခဲ့သော်လည်း ငွေကြေးဖောင်းပွမှုကြောင့် နောက်ပိုင်း အသုံးနည်းသွားသည်။",
       "images": {
-        "obverse": "images/coins/2000-series/50kyats-obverse.jpg",
-        "reverse": "images/coins/2000-series/50kyats-reverse.jpg"
+        "obverse": "images/coins/2000-series/50kyats-obverse-transparent.png",
+        "reverse": "images/coins/2000-series/50kyats-reverse-transparent.png"
       }
     },
     {
@@ -847,8 +847,8 @@
       "status": "ပယ်ဖျက်ပြီး",
       "note": "ဗဟိုဘဏ် လက်ထက် ခြင်္သေ့စီးရီး။ CBM Series ဇယားအရ ၂၀၀၀ မတ် ၂၄ ရက်တွင် ထုတ်ဝေသည်။ ဒင်္ဂါးပေါ်တွင် ၁၉၉၉ ခုနှစ် ရိုက်ထားသည်။ လက်တင်စာလုံး (CENTRAL BANK OF MYANMAR / KYAT) ပါဝင်သော ပထမဆုံး မြန်မာဒင်္ဂါးများအနက် တစ်ခုဖြစ်သည်။ ဟောင်းနွမ်းငွေစက္ကူအစားသုံးရန် ရည်ရွယ်ခဲ့သော်လည်း ငွေကြေးဖောင်းပွမှုကြောင့် နောက်ပိုင်း အသုံးနည်းသွားသည်။",
       "images": {
-        "obverse": "images/coins/2000-series/100kyats-obverse.jpg",
-        "reverse": "images/coins/2000-series/100kyats-reverse.jpg"
+        "obverse": "images/coins/2000-series/100kyats-obverse-transparent.png",
+        "reverse": "images/coins/2000-series/100kyats-reverse-transparent.png"
       }
     }
   
