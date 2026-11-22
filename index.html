@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE RANGOON NUMISMATIC GAZETTE | မြန်မာ့ငွေကြေးသမိုင်း သတင်းစာမှတ်တမ်း</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- jQuery via CDN with Fallback -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    if (typeof window.jQuery === 'undefined') {
+      document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Google Fonts: Newsreader (Newspaper Broadsheet Serif), Noto Sans Myanmar, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       BROADSHEET NEWSPAPER TOKENS (Newsprint Stock, Printer's Ink, Cinnabar Red)
+       ========================================================================== */
+    :root {
+      --newsprint-bg: #E6E0D3;
+      --newsprint-sheet: #F4EFE4;
+      --newsprint-tint: #ECE6D8;
+      --newsprint-well: #E2DBC9;
+      --ink-black: #141311;
+      --ink-charcoal: #3D3A34;
+      --ink-faded: #6B665C;
+      --rule-light: #C6BEAD;
+      --rule-dark: #141311;
+      --press-red: #8A2414;
+
+      --font-masthead: 'Newsreader', 'Noto Sans Myanmar', Georgia, serif;
+      --font-body: 'Noto Sans Myanmar', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--newsprint-bg);
+      color: var(--ink-black);
+      font-family: var(--font-body);
+      overflow-x: clip;
+    }
+
+    /* Subtle tactile newsprint paper grain */
+    body {
+      background-image: radial-gradient(rgba(20, 19, 17, 0.04) 1px, transparent 0);
+      background-size: 16px 16px;
+    }
+
+    .font-masthead {
+      font-family: var(--font-masthead);
+    }
+
+    .font-tabular {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Classic Double Newspaper Rules */
+    .double-rule-top {
+      border-top: 3px solid var(--rule-dark);
+      box-shadow: inset 0 1px 0 var(--newsprint-sheet), inset 0 2px 0 var(--rule-dark);
+    }
+    .double-rule-bottom {
+      border-bottom: 3px solid var(--rule-dark);
+      box-shadow: inset 0 -1px 0 var(--newsprint-sheet), inset 0 -2px 0 var(--rule-dark);
+    }
+
+    /* Clean scrollbar hiding */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .news-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .news-scroll::-webkit-scrollbar-track {
+      background: var(--newsprint-sheet);
+    }
+    .news-scroll::-webkit-scrollbar-thumb {
+      background: var(--rule-light);
+    }
+
+    /* Mechanical Letterpress Tactile Press */
+    .press-btn {
+      transition: transform 90ms ease, background-color 120ms ease, color 120ms ease;
+    }
+    .press-btn:active {
+      transform: translateY(2px);
+    }
+
+    /* 3D Specimen Plate Flipper */
+    .plate-perspective {
+      perspective: 1100px;
+    }
+    .plate-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      transform-style: preserve-3d;
+    }
+    .plate-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+    .plate-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .plate-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Specimen Engraving Halftone / Grid Background */
+    .engraving-plate {
+      background-color: var(--newsprint-well);
+      background-image:
+        linear-gradient(to right, rgba(20, 19, 17, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20, 19, 17, 0.05) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* Newspaper Drop Cap for Lead Editorial */
+    .newspaper-dropcap::first-letter {
+      float: left;
+      font-family: var(--font-masthead);
+      font-size: 3.1rem;
+      line-height: 0.85;
+      padding-top: 4px;
+      padding-right: 10px;
+      padding-bottom: 2px;
+      font-weight: 700;
+      color: var(--ink-black);
+    }
+
+    /* Section Tab States */
+    .section-tab-active {
+      background-color: var(--ink-black);
+      color: var(--newsprint-sheet);
+      border-color: var(--ink-black);
+    }
+    .section-tab-inactive {
+      background-color: var(--newsprint-sheet);
+      color: var(--ink-charcoal);
+      border-color: var(--rule-light);
+    }
+    .section-tab-inactive:hover {
+      border-color: var(--ink-black);
+      color: var(--ink-black);
+    }
+  </style>
+</head>
+<body class="min-h-[100dvh] w-full flex flex-col items-center sm:py-5 sm:px-4">
+
+  <!-- Broadsheet Newspaper Page Container -->
+  <main id="newspaper-sheet" class="relative w-full max-w-[960px] min-h-[100dvh] sm:min-h-0 bg-[var(--newsprint-sheet)] border-x sm:border-2 border-[var(--rule-dark)] sm:shadow-[6px_6px_0px_rgba(20,19,17,0.14)] flex flex-col">
+
+    <!-- ======================================================================
+         1. NEWSPAPER NAMEPLATE & EAR BOXES
+         ====================================================================== -->
+    <header class="px-4 sm:px-7 pt-4 pb-2 bg-[var(--newsprint-sheet)]">
+      <!-- Top Dateline & Edition Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[var(--rule-light)] font-tabular text-[10px] sm:text-[11px] uppercase tracking-[0.12em] text-[var(--ink-charcoal)]">
+        <span>RANGOON · MANDALAY · NAYPYIDAW</span>
+        <span class="hidden md:inline">HISTORICAL ARCHIVE OF BURMESE COINAGE &amp; BANKNOTES</span>
+        <span>EST. 1852 · SERIAL EDITION</span>
+      </div>
+
+      <!-- Masthead Grid with Left/Right Newspaper Ear Boxes -->
+      <div class="grid grid-cols-1 md:grid-cols-[165px_1fr_165px] items-center gap-3 py-3 sm:py-4 double-rule-bottom">
+        <!-- Left Ear Box -->
+        <div class="hidden md:flex flex-col justify-between border border-[var(--rule-dark)] p-2 bg-[var(--newsprint-tint)] text-center h-full">
+          <div class="font-tabular text-[9px] uppercase tracking-widest border-b border-[var(--rule-light)] pb-1 text-[var(--ink-faded)]">CHRONOLOGY</div>
+          <div class="font-masthead font-bold text-sm leading-tight py-1 text-[var(--ink-black)]">
+            Yadanabon<br/>to Modern Kyat
+          </div>
+          <div class="font-tabular text-[9px] text-[var(--ink-charcoal)] border-t border-[var(--rule-light)] pt-1">5 HISTORICAL ERAS</div>
+        </div>
+
+        <!-- Center Broadsheet Nameplate -->
+        <div class="text-center px-1">
+          <div class="font-tabular text-[10px] uppercase tracking-[0.22em] text-[var(--press-red)] font-semibold mb-1">
+            မြန်မာ့ငွေကြေးသမိုင်း သတင်းစာမှတ်တမ်း
+          </div>
+          <h1 class="font-masthead text-2xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight uppercase text-[var(--ink-black)] leading-none">
+            The Rangoon Numismatic Gazette
+          </h1>
+          <p class="font-masthead italic text-xs sm:text-sm text-[var(--ink-charcoal)] mt-1.5">
+            An Illustrated Serial Chronicle of Burmese Coins, Notes &amp; Monetary Reforms (1852–Present)
+          </p>
+        </div>
+
+        <!-- Right Ear Box -->
+        <div class="hidden md:flex flex-col justify-between border border-[var(--rule-dark)] p-2 bg-[var(--newsprint-tint)] text-center h-full">
+          <div class="font-tabular text-[9px] uppercase tracking-widest border-b border-[var(--rule-light)] pb-1 text-[var(--ink-faded)]">CATALOG EDITION</div>
+          <div id="ear-item-count" class="font-masthead font-bold text-sm leading-tight py-1 text-[var(--ink-black)]">
+            Loading catalog…
+          </div>
+          <div class="font-tabular text-[9px] text-[var(--ink-charcoal)] border-t border-[var(--rule-light)] pt-1">PRICE: ONE PE</div>
+        </div>
+      </div>
+
+      <!-- Newspaper Section Navigation Bar (Chapters / Eras) -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-2.5 border-b-2 border-[var(--rule-dark)]">
+        <nav aria-label="Newspaper Sections" id="period-highlights" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+          <!-- Era Section Tabs injected via jQuery -->
+        </nav>
+
+        <div class="flex items-center gap-1.5 shrink-0 self-end sm:self-auto">
+          <!-- Scope Toggle: Full Edition vs Key Highlights -->
+          <button id="btn-mode-toggle" type="button"
+            class="press-btn h-7 px-2.5 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] text-[11px] font-medium whitespace-nowrap">
+            <span id="mode-label">စုံလင်စွာ (Full Edition)</span>
+          </button>
+
+          <!-- Complete Directory Index -->
+          <button id="btn-open-archive" type="button"
+            class="press-btn h-7 px-2.5 border border-[var(--rule-dark)] bg-[var(--ink-black)] text-[var(--newsprint-sheet)] text-[11px] font-semibold flex items-center gap-1.5 whitespace-nowrap">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+              <path stroke-linecap="square" d="M4 6h16M4 12h16M4 18h10" />
+            </svg>
+            <span>စာရင်းချုပ် (Index)</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================================
+         2. SERIAL STORY PROGRESS BAR & FOLIO CONTROL STRIP
+         ====================================================================== -->
+    <section id="story-stage" class="px-4 sm:px-7 pt-2 pb-5 flex-1 flex flex-col justify-between relative">
+      <!-- Segmented Serial Progress Strip -->
+      <div id="progress-bars-container" class="flex items-center gap-1 w-full mb-2">
+        <!-- Progress bars injected dynamically -->
+      </div>
+
+      <!-- Running Folio Sub-header -->
+      <div class="flex items-center justify-between gap-2 pb-2 mb-3 border-b border-[var(--rule-light)]">
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="font-tabular text-[11px] font-bold uppercase tracking-wider text-[var(--press-red)] shrink-0">
+            DISPATCH <span id="slide-counter">01 / 08</span>
+          </span>
+          <span class="text-[var(--rule-light)]">|</span>
+          <span id="slide-era-badge" class="text-xs font-semibold text-[var(--ink-black)] truncate">ပထမ ကျပ်ငွေ</span>
+        </div>
+
+        <div class="flex items-center gap-2 shrink-0">
+          <span class="hidden sm:inline font-tabular text-[10px] text-[var(--ink-faded)]">KEYBOARD: ← → / SPACE / F</span>
+          <span id="paused-badge" class="hidden font-tabular text-[10px] font-semibold uppercase px-1.5 py-0.5 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)]">
+            PRESS HALTED
+          </span>
+          <button id="btn-play-pause" type="button" aria-label="Auto-Advance Toggle"
+            class="press-btn h-7 px-2 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] font-tabular text-[10px] font-semibold flex items-center gap-1">
+            <span id="play-pause-text">PAUSE</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           3. MULTI-COLUMN BROADSHEET STORY VIEWPORT
+           ==================================================================== -->
+      <div id="slide-content-viewport" class="flex-1 flex flex-col">
+        <!-- Rendered dynamically by renderCurrentSlide() -->
+      </div>
+
+      <!-- ====================================================================
+           4. NEWSPAPER EDITION FOOTER & STORY NAVIGATION CONTROLS
+           ==================================================================== -->
+      <footer class="mt-4 pt-3 double-rule-top flex flex-wrap items-center justify-between gap-2">
+        <!-- Previous / Next Column Dispatches -->
+        <div class="flex items-center gap-1.5">
+          <button id="btn-prev-slide" type="button"
+            class="press-btn h-9 px-3 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] text-xs font-semibold flex items-center gap-1.5 whitespace-nowrap">
+            <span>← ယခင်စာမျက်နှာ</span>
+          </button>
+          <button id="btn-next-slide" type="button"
+            class="press-btn h-9 px-3 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] text-xs font-semibold flex items-center gap-1.5 whitespace-nowrap">
+            <span>နောက်စာမျက်နှာ →</span>
+          </button>
+        </div>
+
+        <!-- Specimen Flip Action (Visible on Coin/Banknote Plates) -->
+        <button id="btn-flip-artifact" type="button"
+          class="hidden press-btn h-9 px-4 bg-[var(--press-red)] text-[var(--newsprint-sheet)] border border-[var(--rule-dark)] text-xs font-semibold flex items-center justify-center gap-1.5 whitespace-nowrap">
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="square" d="M4 9h16l-4-4M20 15H4l4 4" />
+          </svg>
+          <span id="flip-btn-text">ကျောဘက်လှည့်ကြည့်ရန်</span>
+        </button>
+
+        <!-- Full Editorial Dossier Modal Trigger -->
+        <button id="btn-read-more" type="button"
+          class="press-btn h-9 px-3.5 border border-[var(--rule-dark)] bg-[var(--ink-black)] text-[var(--newsprint-sheet)] text-xs font-semibold flex items-center gap-1.5 whitespace-nowrap">
+          <span>မှတ်တမ်းအပြည့်အစုံဖတ်ရန်</span>
+        </button>
+      </footer>
+    </section>
+
+    <!-- ======================================================================
+         DRAWER 1: SUPPLEMENTARY EDITORIAL DOSSIER (Full Note & Ledger)
+         ====================================================================== -->
+    <div id="note-drawer-backdrop" class="hidden fixed inset-0 bg-[#141311]/55 z-40"></div>
+    <aside id="note-drawer" class="fixed inset-x-0 bottom-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-full sm:max-w-[640px] z-50 translate-y-full sm:translate-y-0 sm:hidden transition-transform duration-200 bg-[var(--newsprint-sheet)] border-2 border-[var(--rule-dark)] shadow-[8px_8px_0px_#141311] max-h-[86dvh] flex flex-col">
+      <div class="px-4 py-3 double-rule-bottom bg-[var(--newsprint-tint)] flex items-center justify-between gap-3">
+        <div class="min-w-0">
+          <div id="drawer-tag" class="font-tabular text-[10px] uppercase tracking-widest text-[var(--press-red)] font-bold truncate">SPECIAL SUPPLEMENT</div>
+          <h3 id="drawer-title" class="font-masthead text-lg font-bold text-[var(--ink-black)] truncate mt-0.5">ခေါင်းစဉ်</h3>
+        </div>
+        <button id="btn-close-note-drawer" type="button"
+          class="press-btn h-8 px-2.5 border border-[var(--rule-dark)] bg-[var(--newsprint-sheet)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] font-tabular text-xs font-semibold shrink-0">
+          CLOSE [ESC]
+        </button>
+      </div>
+      <div id="drawer-body" class="p-4 sm:p-5 overflow-y-auto news-scroll space-y-4 text-sm leading-relaxed text-[var(--ink-black)]">
+        <!-- Populated dynamically -->
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         DRAWER 2: COMPLETE BROADSHEET ARCHIVE DIRECTORY (Index)
+         ====================================================================== -->
+    <aside id="archive-drawer" class="hidden fixed inset-0 sm:inset-6 max-w-[960px] mx-auto z-50 bg-[var(--newsprint-sheet)] border-2 border-[var(--rule-dark)] shadow-[10px_10px_0px_#141311] flex flex-col">
+      <div class="px-4 sm:px-6 py-3.5 double-rule-bottom bg-[var(--newsprint-tint)] flex items-center justify-between shrink-0">
+        <div>
+          <span class="font-tabular text-[10px] uppercase tracking-[0.16em] text-[var(--press-red)] font-bold">GAZETTE ARCHIVE DIRECTORY</span>
+          <h2 class="font-masthead text-xl font-bold text-[var(--ink-black)]">မြန်မာ့ငွေကြေးပြတိုက် စာရင်းချုပ်</h2>
+        </div>
+        <button id="btn-close-archive" type="button"
+          class="press-btn h-8 px-3 border border-[var(--rule-dark)] bg-[var(--newsprint-sheet)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] font-tabular text-xs font-semibold">
+          CLOSE [ESC]
+        </button>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="px-4 sm:px-6 py-2.5 flex items-center gap-2 border-b border-[var(--rule-dark)] bg-[var(--newsprint-sheet)] shrink-0 overflow-x-auto no-scrollbar">
+        <span class="font-tabular text-[10px] uppercase tracking-wider text-[var(--ink-faded)] mr-1">FILTER:</span>
+        <button type="button" data-archive-filter="all" class="archive-filter-btn press-btn h-7 px-3 border border-[var(--rule-dark)] bg-[var(--ink-black)] text-[var(--newsprint-sheet)] text-xs font-medium whitespace-nowrap">
+          အားလုံး (All 53)
+        </button>
+        <button type="button" data-archive-filter="coin" class="archive-filter-btn press-btn h-7 px-3 border border-[var(--rule-light)] bg-[var(--newsprint-tint)] text-[var(--ink-charcoal)] text-xs font-medium whitespace-nowrap">
+          ဒင်္ဂါးများ (Coins 37)
+        </button>
+        <button type="button" data-archive-filter="banknote" class="archive-filter-btn press-btn h-7 px-3 border border-[var(--rule-light)] bg-[var(--newsprint-tint)] text-[var(--ink-charcoal)] text-xs font-medium whitespace-nowrap">
+          ငွေစက္ကူများ (Banknotes 16)
+        </button>
+      </div>
+
+      <!-- Multi-column Directory Listing -->
+      <div id="archive-grid-container" class="flex-1 overflow-y-auto news-scroll p-4 sm:p-6 space-y-6">
+        <!-- Populated dynamically -->
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    /**
+     * ============================================================================
+     * EMBEDDED HISTORICAL DATASETS (periods.json, coins.json, banknotes.json)
+     * ============================================================================
+     */
+    let PERIODS_DATA = [];
+    let COINS_DATA = [];
+    let BANKNOTES_DATA = [];
+
+    async function loadCatalog() {
+      const catalogs = await Promise.all(['periods', 'coins', 'banknotes'].map(async name => {
+        const response = await fetch(`data/${name}.json`);
+        if (!response.ok) throw new Error(`Cannot load ${name}.json (${response.status})`);
+        const data = await response.json();
+        if (!Array.isArray(data) || (name === 'periods' && !data.length)) {
+          throw new Error(`Invalid catalog: ${name}.json`);
+        }
+        return data;
+      }));
+      [PERIODS_DATA, COINS_DATA, BANKNOTES_DATA] = catalogs;
+      $('#ear-item-count').text(`${COINS_DATA.length} Coins · ${BANKNOTES_DATA.length} Notes`);
+    }
+
+    /**
+     * ============================================================================
+     * APPLICATION STATE
+     * ============================================================================
+     */
+    const AppState = {
+      currentPeriodIndex: 0,
+      currentSlideIndex: 0,
+      isPaused: false,
+      isFlipped: false,
+      highlightsOnly: false,
+      slideDurationMs: 8500,
+      progressPercent: 0,
+      timerInterval: null,
+      lastTickTime: null,
+      archiveFilter: 'all'
+    };
+
+    /**
+     * ============================================================================
+     * CATALOG IMAGE HELPERS
+     * ============================================================================
+     */
+    function toBurmeseDigits(num) {
+      if (num === null || num === undefined) return '';
+      const map = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'];
+      return String(num).replace(/\d/g, d => map[d]);
+    }
+
+    function padTwo(n) {
+      return n < 10 ? `0${n}` : `${n}`;
+    }
+
+    function escapeAttribute(value) {
+      return String(value).replace(/[&<>"']/g, character => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[character]);
+    }
+
+    function artifactImage(item, side, thumbnail = false) {
+      const path = item.images && item.images[side];
+      if (!path) return '<span class="text-xs text-center" role="status">Image unavailable</span>';
+      const classes = thumbnail
+        ? 'w-12 h-10 object-contain shrink-0'
+        : 'w-full h-auto max-w-[360px] max-h-[240px] object-contain';
+      return `<img src="${escapeAttribute(path)}" alt="${escapeAttribute(`${item.value} ${item.unit} (${item.issue_year}) — ${side}`)}"
+        class="${classes}" ${thumbnail ? 'loading="lazy"' : ''} decoding="async"
+        onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
+        <span hidden role="status" class="text-xs text-center">Image unavailable</span>`;
+    }
+
+    /**
+     * ============================================================================
+     * STORY DECK BUILDER
+     * ============================================================================
+     */
+    function getSlidesForPeriod(periodId) {
+      const period = PERIODS_DATA.find(p => p.id === periodId);
+      let periodCoins = COINS_DATA.filter(c => c.period_id === periodId);
+      let periodNotes = BANKNOTES_DATA.filter(b => b.period_id === periodId);
+
+      if (AppState.highlightsOnly) {
+        const seenCoinSeries = new Set();
+        periodCoins = periodCoins.filter(c => {
+          const key = `${c.series}_${c.metal || c.composition}`;
+          if (!seenCoinSeries.has(key)) {
+            seenCoinSeries.add(key);
+            return true;
+          }
+          return false;
+        });
+
+        const seenNoteSeries = new Set();
+        periodNotes = periodNotes.filter(n => {
+          if (!seenNoteSeries.has(n.series)) {
+            seenNoteSeries.add(n.series);
+            return true;
+          }
+          return false;
+        });
+      }
+
+      const slides = [
+        {
+          type: 'intro',
+          period: period,
+          totalCoins: COINS_DATA.filter(c => c.period_id === periodId).length,
+          totalNotes: BANKNOTES_DATA.filter(b => b.period_id === periodId).length
+        }
+      ];
+
+      periodCoins.forEach(coin => {
+        slides.push({ type: 'coin', item: coin, period: period });
+      });
+
+      periodNotes.forEach(note => {
+        slides.push({ type: 'banknote', item: note, period: period });
+      });
+
+      return slides;
+    }
+
+    /**
+     * ============================================================================
+     * BROADSHEET NEWSPAPER RENDERING FUNCTIONS
+     * ============================================================================
+     */
+    function renderPeriodHighlights() {
+      const $container = $('#period-highlights');
+      $container.empty();
+
+      PERIODS_DATA.forEach((period, idx) => {
+        const isActive = idx === AppState.currentPeriodIndex;
+        const stateClass = isActive ? 'section-tab-active' : 'section-tab-inactive';
+        const shortName = period.name.split(' (')[0];
+        const yearRange = period.end_year ? `${period.start_year}–${String(period.end_year).slice(-2)}` : `${period.start_year}–`;
+
+        const $tab = $(`
+          <button type="button" data-period-idx="${idx}"
+            class="period-avatar-btn press-btn shrink-0 px-2.5 py-1 border ${stateClass} text-left flex items-center gap-1.5 whitespace-nowrap">
+            <span class="font-tabular text-[10px] font-bold">SEC.${padTwo(idx + 1)}</span>
+            <span class="text-[11px] font-semibold">${shortName}</span>
+            <span class="font-tabular text-[10px] opacity-75">(${yearRange})</span>
+          </button>
+        `);
+
+        $container.append($tab);
+      });
+
+      const activeBtn = $container.find(`[data-period-idx="${AppState.currentPeriodIndex}"]`)[0];
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }
+
+    function renderProgressBars(totalSlides) {
+      const $container = $('#progress-bars-container');
+      $container.empty();
+
+      for (let i = 0; i < totalSlides; i++) {
+        let initialWidth = '0%';
+        if (i < AppState.currentSlideIndex) initialWidth = '100%';
+        else if (i === AppState.currentSlideIndex) initialWidth = `${AppState.progressPercent}%`;
+
+        const $bar = $(`
+          <div class="h-[3px] flex-1 bg-[var(--rule-light)] overflow-hidden">
+            <div id="progress-fill-${i}" class="h-full bg-[var(--press-red)] transition-none" style="width: ${initialWidth};"></div>
+          </div>
+        `);
+        $container.append($bar);
+      }
+    }
+
+    function renderCurrentSlide() {
+      const period = PERIODS_DATA[AppState.currentPeriodIndex];
+      const slides = getSlidesForPeriod(period.id);
+
+      if (AppState.currentSlideIndex >= slides.length) {
+        AppState.currentSlideIndex = 0;
+      }
+
+      const slide = slides[AppState.currentSlideIndex];
+      AppState.isFlipped = false;
+
+      $('#slide-era-badge').text(period.name);
+      $('#slide-counter').text(`${padTwo(AppState.currentSlideIndex + 1)} / ${padTwo(slides.length)}`);
+
+      renderPeriodHighlights();
+      renderProgressBars(slides.length);
+
+      const $viewport = $('#slide-content-viewport');
+      $viewport.empty();
+
+      // ======================================================================
+      // LAYOUT A: LEAD EDITORIAL COVER STORY (Era Chapter Front Page)
+      // ======================================================================
+      if (slide.type === 'intro') {
+        $('#btn-flip-artifact').addClass('hidden');
+
+        const timelineText = period.end_year
+          ? `${period.start_year} — ${period.end_year}`
+          : `${period.start_year} — PRESENT`;
+
+        const isoNotice = period.iso_code
+          ? `<div class="mt-2 pt-2 border-t border-[var(--rule-light)] flex justify-between text-xs">
+               <span class="text-[var(--ink-faded)]">ISO Standard</span>
+               <span class="font-tabular font-bold">${period.iso_code} (${period.symbol})</span>
+             </div>`
+          : '';
+
+        const html = `
+          <article class="flex-1 flex flex-col">
+            <!-- Broadsheet Banner Headline -->
+            <div class="border-b-2 border-[var(--rule-dark)] pb-3 mb-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="font-tabular text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--press-red)]">
+                  SECTION ${padTwo(period.id)} LEAD ARTICLE · ${timelineText}
+                </span>
+                <span class="font-tabular text-[11px] text-[var(--ink-faded)] uppercase">
+                  ${period.name_en}
+                </span>
+              </div>
+              <h2 class="font-masthead text-2xl sm:text-4xl font-extrabold text-[var(--ink-black)] leading-tight tracking-tight">
+                ${period.name} — ခေတ်သမိုင်းအကျဉ်းချုပ်
+              </h2>
+              <p class="font-masthead italic text-sm sm:text-base text-[var(--ink-charcoal)] mt-1">
+                By the Numismatic Archivist · Historical Monetary Series of Myanmar
+              </p>
+            </div>
+
+            <!-- Two-Column Newspaper Editorial Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_250px] gap-5 flex-1">
+              <!-- Main Editorial Column with Drop Cap -->
+              <div class="md:border-r md:border-[var(--rule-light)] md:pr-5 flex flex-col justify-between">
+                <p class="newspaper-dropcap text-[14.5px] sm:text-[15.5px] leading-[1.9] text-[var(--ink-black)] text-justify">
+                  ${period.description}
+                </p>
+
+                <div class="mt-4 pt-2.5 border-t border-[var(--rule-light)] flex items-center justify-between text-xs text-[var(--ink-charcoal)]">
+                  <span>ဤခေတ်အတွင်း ထုတ်ဝေခဲ့သော ဒင်္ဂါးနှင့် ငွေစက္ကူများကို ဆက်လက်ဖတ်ရှုပါ</span>
+                  <span class="font-tabular font-bold text-[var(--ink-black)]">CONT. →</span>
+                </div>
+              </div>
+
+              <!-- Right Sidebar: Official Treasury Ledger Box -->
+              <aside class="flex flex-col justify-between border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] p-3.5">
+                <div>
+                  <div class="font-tabular text-[10px] font-bold uppercase tracking-widest text-center border-b-2 border-[var(--rule-dark)] pb-1.5 mb-3">
+                    TREASURY ARCHIVE LEDGER
+                  </div>
+
+                  <div class="space-y-2.5 text-xs">
+                    <div class="flex justify-between border-b border-[var(--rule-light)] pb-1.5">
+                      <span class="text-[var(--ink-faded)]">ကာလအပိုင်းအခြား</span>
+                      <span class="font-tabular font-bold text-[var(--ink-black)]">${timelineText}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-[var(--rule-light)] pb-1.5">
+                      <span class="text-[var(--ink-faded)]">မှတ်တမ်းဝင် ဒင်္ဂါး</span>
+                      <span class="font-bold text-[var(--ink-black)]">${toBurmeseDigits(slide.totalCoins)} မျိုး</span>
+                    </div>
+                    <div class="flex justify-between border-b border-[var(--rule-light)] pb-1.5">
+                      <span class="text-[var(--ink-faded)]">မှတ်တမ်းဝင် ငွေစက္ကူ</span>
+                      <span class="font-bold text-[var(--ink-black)]">${toBurmeseDigits(slide.totalNotes)} မျိုး</span>
+                    </div>
+                    ${isoNotice}
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-2.5 border-t border-[var(--rule-dark)] text-[11px] leading-relaxed text-[var(--ink-charcoal)]">
+                  <span class="font-bold uppercase font-tabular text-[10px] block mb-0.5">EDITOR'S NOTE:</span>
+                  အောက်ပါ စာမျက်နှာများတွင် တစ်ခုချင်းစီ၏ ရှေ့မျက်နှာနှင့် ကျောဘက်ပုံစံများကို လှည့်လည်စစ်ဆေးနိုင်ပါသည်။
+                </div>
+              </aside>
+            </div>
+          </article>
+        `;
+        $viewport.html(html);
+        return;
+      }
+
+      // ======================================================================
+      // LAYOUT B: SPECIMEN DISPATCH (Broadsheet Figure Plate + Multi-Column)
+      // ======================================================================
+      const item = slide.item;
+      const isCoin = slide.type === 'coin';
+
+      $('#btn-flip-artifact').removeClass('hidden');
+      $('#flip-btn-text').text('ကျောဘက်လှည့်ကြည့်ရန်');
+
+      const frontMediaHtml = artifactImage(item, 'obverse');
+      const backMediaHtml = artifactImage(item, 'reverse');
+
+      const specs = [
+        { label: 'ထုတ်ဝေသည့်အဖွဲ့', val: item.issuer || '-' },
+        { label: 'ထုတ်ဝေနှစ်', val: item.issue_date ? `${item.issue_year} (${item.issue_date})` : item.issue_year }
+      ];
+
+      if (isCoin) {
+        if (item.metal || item.composition) specs.push({ label: 'သတ္တုဖွဲ့စည်းမှု', val: item.metal || item.composition });
+        if (item.diameter_mm) specs.push({ label: 'အချင်း (Diameter)', val: `${item.diameter_mm} mm` });
+        if (item.mass_g) specs.push({ label: 'အလေးချိန် (Mass)', val: `${item.mass_g} g` });
+        if (item.shape) specs.push({ label: 'ပုံသဏ္ဌာန်', val: item.shape });
+      } else {
+        if (item.main_color) specs.push({ label: 'အဓိကအရောင်', val: item.main_color });
+        if (item.size) specs.push({ label: 'အရွယ်အစား', val: item.size });
+      }
+
+      specs.push({ label: 'လက်ရှိအခြေအနေ', val: item.status || 'တရားဝင်' });
+      if (item.demonetized_date) {
+        specs.push({ label: 'ပယ်ဖျက်သည့်ရက်စွဲ', val: item.demonetized_date });
+      }
+
+      const specRowsHtml = specs.map(sp => `
+        <div class="flex justify-between items-baseline gap-3 py-1.5 border-b border-[var(--rule-light)] text-xs">
+          <span class="text-[var(--ink-faded)] shrink-0">${sp.label}</span>
+          <span class="font-semibold text-[var(--ink-black)] text-right">${sp.val}</span>
+        </div>
+      `).join('');
+
+      const html = `
+        <article class="flex-1 flex flex-col">
+          <!-- Broadsheet Specimen Headline -->
+          <div class="border-b-2 border-[var(--rule-dark)] pb-2.5 mb-4 flex flex-wrap items-baseline justify-between gap-2">
+            <div>
+              <div class="font-tabular text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[var(--press-red)]">
+                SPECIMEN PLATE NO. ${padTwo(item.id)} · ${item.series} (${item.issue_year})
+              </div>
+              <h2 class="font-masthead text-2xl sm:text-3xl font-extrabold text-[var(--ink-black)] leading-tight mt-0.5">
+                ${toBurmeseDigits(item.value)} ${item.unit}
+                <span class="font-sans text-sm font-medium text-[var(--ink-charcoal)]">(${isCoin ? 'သတ္တုဒင်္ဂါး' : 'ငွေစက္ကူ'})</span>
+              </h2>
+            </div>
+
+            <span id="face-indicator-pill" class="font-tabular text-[11px] font-bold uppercase tracking-widest px-2.5 py-0.5 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)]">
+              FIG. A — OBVERSE
+            </span>
+          </div>
+
+          <!-- Two-Column Newspaper Layout: Left Engraving Plate + Right Article & Ledger -->
+          <div class="grid grid-cols-1 md:grid-cols-[1.05fr_1fr] gap-5 flex-1">
+            <!-- Left Column: Framed Newspaper Engraving Plate -->
+            <div class="flex flex-col border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] p-3">
+              <div id="artifact-flip-trigger" class="plate-perspective engraving-plate border border-[var(--rule-light)] flex-1 min-h-[210px] sm:min-h-[245px] flex items-center justify-center p-3 cursor-pointer" title="လှည့်ကြည့်ရန် နှိပ်ပါ">
+                <div id="artifact-flip-inner" class="plate-inner min-h-[210px] sm:min-h-[245px]">
+                  <div class="plate-face plate-front">
+                    ${frontMediaHtml}
+                  </div>
+                  <div class="plate-face plate-back">
+                    ${backMediaHtml}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Newspaper Figure Caption -->
+              <figcaption class="pt-2.5 mt-2.5 border-t border-[var(--rule-dark)] text-xs leading-snug">
+                <span id="design-face-label" class="font-bold uppercase font-tabular text-[11px] text-[var(--ink-black)]">ရှေ့မျက်နှာပုံစံ — </span>
+                <span id="design-face-desc" class="text-[var(--ink-charcoal)]">${item.obverse || '-'}</span>
+              </figcaption>
+            </div>
+
+            <!-- Right Column: Reporter's Historical Note & Technical Table -->
+            <div class="flex flex-col justify-between md:border-l md:border-[var(--rule-light)] md:pl-5">
+              <!-- Historical Commentary -->
+              <div>
+                <div class="font-tabular text-[10px] font-bold uppercase tracking-widest text-[var(--ink-faded)] mb-1.5">
+                  HISTORICAL RECORD · သမိုင်းမှတ်တမ်း
+                </div>
+                <p class="text-[13.5px] sm:text-[14px] leading-[1.85] text-[var(--ink-black)] text-justify">
+                  ${item.note || ''}
+                </p>
+              </div>
+
+              <!-- Technical Specification Ledger -->
+              <div class="mt-4 pt-3 border-t-2 border-[var(--rule-dark)]">
+                <div class="font-tabular text-[10px] font-bold uppercase tracking-widest text-[var(--ink-black)] mb-1">
+                  TECHNICAL SPECIFICATIONS
+                </div>
+                <div>
+                  ${specRowsHtml}
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+
+      $viewport.html(html);
+    }
+
+    /**
+     * ============================================================================
+     * PLAYBACK ENGINE & INTERACTION CONTROLLERS
+     * ============================================================================
+     */
+    function startStoryTimer() {
+      stopStoryTimer();
+      AppState.lastTickTime = performance.now();
+
+      AppState.timerInterval = setInterval(() => {
+        if (AppState.isPaused) {
+          AppState.lastTickTime = performance.now();
+          return;
+        }
+
+        const now = performance.now();
+        const delta = now - AppState.lastTickTime;
+        AppState.lastTickTime = now;
+
+        AppState.progressPercent += (delta / AppState.slideDurationMs) * 100;
+
+        if (AppState.progressPercent >= 100) {
+          AppState.progressPercent = 100;
+          $(`#progress-fill-${AppState.currentSlideIndex}`).css('width', '100%');
+          nextSlide();
+        } else {
+          $(`#progress-fill-${AppState.currentSlideIndex}`).css('width', `${AppState.progressPercent}%`);
+        }
+      }, 45);
+    }
+
+    function stopStoryTimer() {
+      if (AppState.timerInterval) {
+        clearInterval(AppState.timerInterval);
+        AppState.timerInterval = null;
+      }
+    }
+
+    function setPaused(paused) {
+      AppState.isPaused = paused;
+      if (paused) {
+        $('#play-pause-text').text('RESUME');
+        $('#paused-badge').removeClass('hidden');
+      } else {
+        $('#play-pause-text').text('PAUSE');
+        $('#paused-badge').addClass('hidden');
+        AppState.lastTickTime = performance.now();
+      }
+    }
+
+    function nextSlide() {
+      const period = PERIODS_DATA[AppState.currentPeriodIndex];
+      const slides = getSlidesForPeriod(period.id);
+
+      AppState.progressPercent = 0;
+
+      if (AppState.currentSlideIndex < slides.length - 1) {
+        AppState.currentSlideIndex++;
+        renderCurrentSlide();
+      } else if (AppState.currentPeriodIndex < PERIODS_DATA.length - 1) {
+        AppState.currentPeriodIndex++;
+        AppState.currentSlideIndex = 0;
+        renderCurrentSlide();
+      } else {
+        AppState.currentPeriodIndex = 0;
+        AppState.currentSlideIndex = 0;
+        renderCurrentSlide();
+      }
+    }
+
+    function prevSlide() {
+      AppState.progressPercent = 0;
+
+      if (AppState.currentSlideIndex > 0) {
+        AppState.currentSlideIndex--;
+        renderCurrentSlide();
+      } else if (AppState.currentPeriodIndex > 0) {
+        AppState.currentPeriodIndex--;
+        const prevPeriod = PERIODS_DATA[AppState.currentPeriodIndex];
+        const prevSlides = getSlidesForPeriod(prevPeriod.id);
+        AppState.currentSlideIndex = prevSlides.length - 1;
+        renderCurrentSlide();
+      } else {
+        AppState.currentSlideIndex = 0;
+        renderCurrentSlide();
+      }
+    }
+
+    function jumpToPeriod(periodIndex, slideIndex = 0) {
+      AppState.currentPeriodIndex = periodIndex;
+      AppState.currentSlideIndex = slideIndex;
+      AppState.progressPercent = 0;
+      renderCurrentSlide();
+    }
+
+    function toggleFlipArtifact() {
+      const period = PERIODS_DATA[AppState.currentPeriodIndex];
+      const slides = getSlidesForPeriod(period.id);
+      const slide = slides[AppState.currentSlideIndex];
+      if (!slide || slide.type === 'intro') return;
+
+      AppState.isFlipped = !AppState.isFlipped;
+      const item = slide.item;
+
+      if (AppState.isFlipped) {
+        $('#artifact-flip-inner').addClass('is-flipped');
+        $('#face-indicator-pill').text('FIG. B — REVERSE');
+        $('#flip-btn-text').text('ရှေ့မျက်နှာကြည့်ရန်');
+        $('#design-face-label').text('နောက်ကျောပုံစံ — ');
+        $('#design-face-desc').text(item.reverse || '-');
+      } else {
+        $('#artifact-flip-inner').removeClass('is-flipped');
+        $('#face-indicator-pill').text('FIG. A — OBVERSE');
+        $('#flip-btn-text').text('ကျောဘက်လှည့်ကြည့်ရန်');
+        $('#design-face-label').text('ရှေ့မျက်နှာပုံစံ — ');
+        $('#design-face-desc').text(item.obverse || '-');
+      }
+    }
+
+    /**
+     * ============================================================================
+     * DRAWERS: SUPPLEMENTARY DOSSIER & DIRECTORY INDEX
+     * ============================================================================
+     */
+    function openNoteDrawer() {
+      setPaused(true);
+      const period = PERIODS_DATA[AppState.currentPeriodIndex];
+      const slides = getSlidesForPeriod(period.id);
+      const slide = slides[AppState.currentSlideIndex];
+
+      const $body = $('#drawer-body');
+      $body.empty();
+
+      if (slide.type === 'intro') {
+        $('#drawer-tag').text(`SECTION ${padTwo(period.id)} · ${period.name_en.toUpperCase()}`);
+        $('#drawer-title').text(period.name);
+        $body.html(`
+          <div class="p-4 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] leading-[1.95] text-justify">
+            ${period.description}
+          </div>
+        `);
+      } else {
+        const item = slide.item;
+        const isCoin = slide.type === 'coin';
+        $('#drawer-tag').text(`${period.name} · ${item.series}`);
+        $('#drawer-title').text(`${toBurmeseDigits(item.value)} ${item.unit} (${item.issue_year})`);
+
+        const rows = [
+          { k: 'ထုတ်ဝေသည့်အဖွဲ့အစည်း', v: item.issuer || '-' },
+          { k: 'ထုတ်ဝေသည့်ခုနှစ် / ရက်စွဲ', v: item.issue_date ? `${item.issue_year} (${item.issue_date})` : item.issue_year },
+          { k: 'ရှေ့မျက်နှာဒီဇိုင်း (Obverse)', v: item.obverse || '-' },
+          { k: 'နောက်ကျောဒီဇိုင်း (Reverse)', v: item.reverse || '-' },
+          ...(isCoin ? [
+            { k: 'သတ္တုအမျိုးအစား', v: item.metal || item.composition || '-' },
+            { k: 'ပုံသဏ္ဌာန်', v: item.shape || '-' },
+            { k: 'အချင်း (Diameter)', v: item.diameter_mm ? `${item.diameter_mm} mm` : '-' },
+            { k: 'အလေးချိန် (Mass)', v: item.mass_g ? `${item.mass_g} g` : '-' }
+          ] : [
+            { k: 'အဓိကအရောင်', v: item.main_color || '-' },
+            { k: 'အရွယ်အစား', v: item.size || '-' }
+          ]),
+          { k: 'လက်ရှိအခြေအနေ', v: item.status || 'တရားဝင်' },
+          ...(item.demonetized_date ? [{ k: 'ပယ်ဖျက်သည့်ရက်စွဲ', v: item.demonetized_date }] : [])
+        ];
+
+        const tableHtml = rows.map(r => `
+          <div class="flex justify-between gap-4 py-2 border-b border-[var(--rule-light)] text-xs">
+            <span class="text-[var(--ink-faded)] shrink-0">${r.k}</span>
+            <span class="text-[var(--ink-black)] font-semibold text-right">${r.v}</span>
+          </div>
+        `).join('');
+
+        $body.html(`
+          <div class="p-4 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] leading-[1.9] text-justify">
+            <div class="font-tabular text-[10px] font-bold uppercase tracking-wider text-[var(--press-red)] mb-1">ARCHIVAL DISPATCH</div>
+            ${item.note || ''}
+          </div>
+          <div class="p-4 border border-[var(--rule-dark)] bg-[var(--newsprint-sheet)]">
+            <div class="font-tabular text-[10px] font-bold uppercase tracking-wider text-[var(--ink-black)] mb-2">OFFICIAL SPECIFICATION LEDGER</div>
+            ${tableHtml}
+          </div>
+        `);
+      }
+
+      $('#note-drawer-backdrop').removeClass('hidden');
+      $('#note-drawer').removeClass('translate-y-full sm:hidden');
+    }
+
+    function closeNoteDrawer() {
+      $('#note-drawer').addClass('translate-y-full sm:hidden');
+      $('#note-drawer-backdrop').addClass('hidden');
+      setPaused(false);
+    }
+
+    function openArchiveDrawer() {
+      setPaused(true);
+      renderArchiveGrid();
+      $('#note-drawer-backdrop').removeClass('hidden');
+      $('#archive-drawer').removeClass('hidden');
+    }
+
+    function closeArchiveDrawer() {
+      $('#archive-drawer').addClass('hidden');
+      $('#note-drawer-backdrop').addClass('hidden');
+      setPaused(false);
+    }
+
+    function renderArchiveGrid() {
+      const $container = $('#archive-grid-container');
+      $container.empty();
+
+      PERIODS_DATA.forEach((period, pIdx) => {
+        const coins = AppState.archiveFilter !== 'banknote'
+          ? COINS_DATA.filter(c => c.period_id === period.id)
+          : [];
+        const notes = AppState.archiveFilter !== 'coin'
+          ? BANKNOTES_DATA.filter(b => b.period_id === period.id)
+          : [];
+
+        if (coins.length === 0 && notes.length === 0 && AppState.archiveFilter !== 'all') {
+          return;
+        }
+
+        const $section = $(`
+          <section class="space-y-2.5">
+            <div class="flex items-center justify-between sticky top-0 bg-[var(--newsprint-sheet)] py-1.5 z-10 border-b-2 border-[var(--rule-dark)]">
+              <div>
+                <h3 class="font-masthead text-base font-bold text-[var(--ink-black)]">SECTION ${padTwo(period.id)}: ${period.name}</h3>
+                <p class="font-tabular text-[10px] text-[var(--ink-faded)]">${period.start_year} — ${period.end_year || 'PRESENT'}</p>
+              </div>
+              <button type="button" data-jump-period="${pIdx}" data-jump-slide="0"
+                class="archive-jump-btn press-btn px-2.5 py-1 border border-[var(--rule-dark)] bg-[var(--newsprint-tint)] hover:bg-[var(--ink-black)] hover:text-[var(--newsprint-sheet)] text-[11px] font-semibold whitespace-nowrap">
+                ခေတ်အစသို့ →
+              </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2" id="archive-items-${period.id}"></div>
+          </section>
+        `);
+
+        const $list = $section.find(`#archive-items-${period.id}`);
+        const periodAllCoins = COINS_DATA.filter(c => c.period_id === period.id);
+        const periodAllNotes = BANKNOTES_DATA.filter(b => b.period_id === period.id);
+
+        coins.forEach(coin => {
+          const slideIdx = 1 + periodAllCoins.findIndex(c => c.id === coin.id);
+          $list.append(`
+            <button type="button" data-jump-period="${pIdx}" data-jump-slide="${slideIdx}"
+              class="archive-jump-btn press-btn text-left p-2.5 border border-[var(--rule-light)] hover:border-[var(--rule-dark)] bg-[var(--newsprint-tint)] flex items-center justify-between gap-2.5">
+              <div class="flex items-center gap-2.5 min-w-0">
+                ${artifactImage(coin, 'obverse', true)}
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-[var(--ink-black)] truncate">${toBurmeseDigits(coin.value)} ${coin.unit}</div>
+                  <div class="text-[10px] text-[var(--ink-charcoal)] truncate">${coin.series}</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="font-tabular text-[11px] font-bold text-[var(--ink-black)]">${coin.issue_year}</div>
+                <div class="font-tabular text-[9px] uppercase text-[var(--ink-faded)]">COIN</div>
+              </div>
+            </button>
+          `);
+        });
+
+        notes.forEach(note => {
+          const slideIdx = 1 + periodAllCoins.length + periodAllNotes.findIndex(n => n.id === note.id);
+          $list.append(`
+            <button type="button" data-jump-period="${pIdx}" data-jump-slide="${slideIdx}"
+              class="archive-jump-btn press-btn text-left p-2.5 border border-[var(--rule-light)] hover:border-[var(--rule-dark)] bg-[var(--newsprint-tint)] flex items-center justify-between gap-2.5">
+              <div class="flex items-center gap-2.5 min-w-0">
+                ${artifactImage(note, 'obverse', true)}
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-[var(--ink-black)] truncate">${toBurmeseDigits(note.value)} ${note.unit}</div>
+                  <div class="text-[10px] text-[var(--ink-charcoal)] truncate">${note.series}</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="font-tabular text-[11px] font-bold text-[var(--ink-black)]">${note.issue_year}</div>
+                <div class="font-tabular text-[9px] uppercase text-[var(--ink-faded)]">NOTE</div>
+              </div>
+            </button>
+          `);
+        });
+
+        $container.append($section);
+      });
+    }
+
+    /**
+     * ============================================================================
+     * EVENT LISTENERS & INITIALIZATION
+     * ============================================================================
+     */
+    async function initNewspaperApp() {
+      $('#slide-content-viewport').html('<p role="status" class="py-8 text-center">Loading archive…</p>');
+      $('#story-stage button, #btn-mode-toggle, #btn-open-archive').prop('disabled', true);
+      try {
+        await loadCatalog();
+      } catch (error) {
+        console.error(error);
+        $('#slide-content-viewport').html('<div role="alert" class="py-8 text-center"><p>Unable to load the archive. Serve this folder through a local web server and reload.</p><button type="button" onclick="location.reload()" class="press-btn border px-3 py-2 mt-3">Retry</button></div>');
+        return;
+      }
+      $('#story-stage button, #btn-mode-toggle, #btn-open-archive').prop('disabled', false);
+      renderCurrentSlide();
+      startStoryTimer();
+
+      $(document).on('click', '.period-avatar-btn', function() {
+        const idx = parseInt($(this).data('period-idx'), 10);
+        jumpToPeriod(idx, 0);
+      });
+
+      $('#btn-prev-slide').on('click', function(e) {
+        e.stopPropagation();
+        prevSlide();
+      });
+      $('#btn-next-slide').on('click', function(e) {
+        e.stopPropagation();
+        nextSlide();
+      });
+
+      $('#btn-play-pause').on('click', function(e) {
+        e.stopPropagation();
+        setPaused(!AppState.isPaused);
+      });
+
+      $('#btn-flip-artifact').on('click', function(e) {
+        e.stopPropagation();
+        toggleFlipArtifact();
+      });
+      $(document).on('click', '#artifact-flip-trigger', function(e) {
+        e.stopPropagation();
+        toggleFlipArtifact();
+      });
+
+      $('#btn-mode-toggle').on('click', function() {
+        AppState.highlightsOnly = !AppState.highlightsOnly;
+        $('#mode-label').text(AppState.highlightsOnly ? 'အနှစ်ချုပ် (Highlights)' : 'စုံလင်စွာ (Full Edition)');
+        AppState.currentSlideIndex = 0;
+        AppState.progressPercent = 0;
+        renderCurrentSlide();
+      });
+
+      $('#btn-read-more').on('click', function(e) {
+        e.stopPropagation();
+        openNoteDrawer();
+      });
+      $('#btn-close-note-drawer, #note-drawer-backdrop').on('click', function() {
+        closeNoteDrawer();
+        closeArchiveDrawer();
+      });
+
+      $('#btn-open-archive').on('click', function() {
+        openArchiveDrawer();
+      });
+      $('#btn-close-archive').on('click', function() {
+        closeArchiveDrawer();
+      });
+
+      $(document).on('click', '.archive-filter-btn', function() {
+        $('.archive-filter-btn')
+          .removeClass('border-[var(--rule-dark)] bg-[var(--ink-black)] text-[var(--newsprint-sheet)]')
+          .addClass('border-[var(--rule-light)] bg-[var(--newsprint-tint)] text-[var(--ink-charcoal)]');
+        $(this)
+          .removeClass('border-[var(--rule-light)] bg-[var(--newsprint-tint)] text-[var(--ink-charcoal)]')
+          .addClass('border-[var(--rule-dark)] bg-[var(--ink-black)] text-[var(--newsprint-sheet)]');
+
+        AppState.archiveFilter = $(this).data('archive-filter');
+        renderArchiveGrid();
+      });
+
+      $(document).on('click', '.archive-jump-btn', function() {
+        const pIdx = parseInt($(this).data('jump-period'), 10);
+        const sIdx = parseInt($(this).data('jump-slide'), 10);
+
+        if (AppState.highlightsOnly) {
+          AppState.highlightsOnly = false;
+          $('#mode-label').text('စုံလင်စွာ (Full Edition)');
+        }
+
+        closeArchiveDrawer();
+        jumpToPeriod(pIdx, sIdx);
+      });
+
+      $(document).on('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+          nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === ' ') {
+          e.preventDefault();
+          setPaused(!AppState.isPaused);
+        } else if (e.key.toLowerCase() === 'f') {
+          toggleFlipArtifact();
+        } else if (e.key === 'Escape') {
+          closeNoteDrawer();
+          closeArchiveDrawer();
+        }
+      });
+
+      // Touch swipe navigation on mobile
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      $('#story-stage').on('touchstart', function(e) {
+        const touch = e.originalEvent.touches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+      });
+
+      $('#story-stage').on('touchend', function(e) {
+        const touch = e.originalEvent.changedTouches[0];
+        const dx = touch.clientX - touchStartX;
+        const dy = touch.clientY - touchStartY;
+
+        if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0) nextSlide();
+          else prevSlide();
+        }
+      });
+    }
+
+    (function bootstrapWhenJQueryReady() {
+      if (typeof window.jQuery !== 'undefined') {
+        window.jQuery(document).ready(initNewspaperApp);
+      } else {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js';
+        script.onload = function() {
+          window.jQuery(document).ready(initNewspaperApp);
+        };
+        document.head.appendChild(script);
+      }
+    })();
+  </script>
+</body>
+</html>
